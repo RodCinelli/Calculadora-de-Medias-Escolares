@@ -6,7 +6,7 @@
 }
 
 body {
-    background-color: #E7E7E7;
+    background-color: #E3F2FD;
     padding-top: 100px;
 }
 
@@ -37,7 +37,9 @@ form {
     max-width: 640px;
     width: 100%;
     justify-content: space-between;
+    align-items: center;
     margin-bottom: 56px;
+    gap: 20px;
 }
 
 form input {
@@ -56,6 +58,36 @@ form button {
     border: none;
     cursor: pointer;
     padding: 8px;
+}
+
+/* Adicionando bordas aos campos de entrada e botões */
+form input, form button {
+    border: 2px solid #000; /* Cor da borda preta para destaque */
+    border-radius: 5px; /* Bordas arredondadas para uma aparência suave */
+}
+
+/* Estilos específicos para botões para diferenciá-los dos campos de entrada */
+form button {
+    background-color: #009432; /* Mantém a cor de fundo original */
+    color: #fff; /* Mantém a cor do texto original */
+    padding: 8px 12px; /* Ajusta o padding para acomodar a borda */
+    transition: background-color 0.3s; /* Suaviza a transição de cores */
+}
+
+form button:hover {
+    background-color: #007a29; /* Escurece o botão ao passar o mouse para indicar interatividade */
+}
+
+#limpar {
+    background-color: #e74c3c;
+}
+
+#limpar:hover {
+    background-color: #c0392b; /* Escurece o botão limpar ao passar o mouse */
+}
+
+#nota-atividade {
+    margin-right: 11.5em; /* adicionado para criar espaço à direita do campo nota */
 }
 
 table {
@@ -94,4 +126,49 @@ table td img {
 
 .reprovado {
     background-color: red;
+}
+
+/* Estilização existente para web aqui */
+
+@media (max-width: 768px) {
+    body {
+        padding-top: 20px; /* Ajuste para o topo em dispositivos móveis */
+    }
+
+    header {
+        flex-direction: column; /* Empilha logo e título verticalmente */
+        align-items: center;
+        margin-bottom: 20px; /* Espaçamento reduzido */
+    }
+
+    header img {
+        margin-right: 0; /* Remove margem direita para o logo */
+    }
+
+    header h1 {
+        font-size: 24px; /* Reduz o tamanho do título */
+    }
+
+    .container, form {
+        max-width: 100%; /* Utiliza toda a largura disponível */
+        padding: 0 10px; /* Adiciona padding nas laterais */
+    }
+
+    form {
+        flex-direction: column; /* Organiza os elementos do formulário verticalmente */
+        align-items: stretch; /* Estende os elementos para usar toda a largura */
+        gap: 15px; /* Aumenta o espaço entre os elementos do formulário */
+    }
+
+    form input, form button {
+        font-size: 18px; /* Ajusta o tamanho da fonte para maior legibilidade */
+    }
+
+    table, table th, table td {
+        font-size: 16px; /* Ajusta o tamanho da fonte para tabelas */
+    }
+
+    #nota-atividade {
+        margin-right: 0; /* Remove a margem adicional à direita */
+    }
 }
